@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Claim Free Week — IronPeak Gym</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Claim your free week at IronPeak Gym. Limited spots. Book now." />
+</head>
+<body class="page-landing">
+  <header class="site-header small">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">IronPeak</a>
+      <nav aria-label="Landing navigation">
+        <a class="btn-ghost" href="index.html">View Full Site</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="landing-hero container">
+      <div class="landing-content">
+        <h1>Claim your <span class="accent">Free Week</span> at IronPeak</h1>
+        <p>Limited time offer — try our classes, use the gym, and book a free PT session.</p>
+
+        <ul class="benefits">
+          <li>Access to all classes</li>
+          <li>Personal welcome session</li>
+          <li>No commitment — cancel anytime</li>
+        </ul>
+
+        <div class="landing-cta">
+          <!-- This CTA starts the onboarding flow: shows the booking form below -->
+          <button id="openForm" class="btn-primary">Book Your Free Week</button>
+          <a class="btn-ghost" href="#how">How it Works</a>
+        </div>
+
+        <p class="small-note">No credit card required. Limited spots available.</p>
+      </div>
+
+      <div class="landing-visual" aria-hidden="true">
+        <svg width="320" height="240" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="320" height="240" rx="12" fill="#fef3c7"></rect>
+          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#b45309">Free Week</text>
+        </svg>
+      </div>
+    </section>
+
+    <section id="how" class="container section">
+      <h2>How it Works</h2>
+      <ol>
+        <li>Click Book Your Free Week</li>
+        <li>Fill the short form</li>
+        <li>Receive confirmation by email or SMS</li>
+        <li>Start training — upgrade anytime</li>
+      </ol>
+    </section>
+
+    <section class="container section">
+      <h2>Why Members Love Us</h2>
+      <div class="grid grid-2">
+        <blockquote class="card">“The trainers are supportive and the classes are fun.” — Aisha</blockquote>
+        <blockquote class="card">“I lost 8 kg in 3 months. Best decision ever.” — Roland</blockquote>
+      </div>
+    </section>
+
+    <!-- Booking form (client-side only — no backend) -->
+    <section id="booking" class="container section form-section hidden" aria-hidden="true">
+      <h2>Book your free week</h2>
+      <form id="leadForm" class="lead-form" novalidate>
+        <div class="form-row">
+          <label for="fullname">Full name</label>
+          <input id="fullname" name="fullname" type="text" required minlength="2" />
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" required pattern="\\+?[0-9\\s-]{7,15}" placeholder="+237 6XX XXX XXX" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email (optional)</label>
+          <input id="email" name="email" type="email" />
+        </div>
+
+        <div class="form-row">
+          <label for="preferred">Preferred start date</label>
+          <input id="preferred" name="preferred" type="date" />
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Confirm Booking</button>
+          <button type="button" id="cancelForm" class="btn-ghost">Cancel</button>
+        </div>
+
+        <p class="form-note">This form is a front-end demo. Later we’ll connect it to an email system or database.</p>
+
+        <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year2"></span> IronPeak Gym — Try us free</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
